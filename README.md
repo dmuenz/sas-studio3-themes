@@ -4,7 +4,7 @@ SAS Studio version 3 has a bright white theme with no built-in options to custom
 
 ## Installation
 
-To use, first install the [Stylus browser extension](https://github.com/openstyles/stylus), available for Chrome, Edge (via Chrome), and Firefox. Then click a link below to install one of the themes. You can install more than one theme and toggle between them as desired.
+To use, first install the **Stylus** browser extension, available for [Chrome, Edge (via Chrome)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), and [Firefox](https://addons.mozilla.org/firefox/addon/styl-us/). Then click a link below to install one of the themes. You can install more than one theme and toggle between them as desired.
 
 📦 [Install *Ignite Dark*](https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/ignite-dark.user.css) : a dark theme inspired by the theme of the same name from SAS Enterprise Guide.
 
