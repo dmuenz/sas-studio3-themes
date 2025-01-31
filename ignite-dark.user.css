@@ -1,20 +1,15 @@
 /* ==UserStyle==
 @name        Ignite Dark
-@namespace   dmuenz
+@namespace   https://github.com/dmuenz/sas-studio3-themes
 @version     1.0.0
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/ignite-dark.user.css
-@license     CC-BY-SA-4.0
+@license     MIT
+@description A dark theme for SAS Studio 3.x, inspired by the built-in Ignite theme from later versions of SAS Studio
 @author      Daniel Muenz
-@advanced text custom-font "Font Family" "Consolas, 'Lucida Console', Courier, Monaco, monospace"
+@advanced text custom-font "Font Family" ""
 @preprocessor uso
 ==/UserStyle== */
-
-/*
- * Ignite Dark Theme for SAS Studio 3.x
- *
- * Inspired by the theme of the same name from later versions of SAS Studio
- */
 
 @-moz-document regexp(".*/SASStudio/.*") {
 
