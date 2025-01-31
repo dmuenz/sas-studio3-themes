@@ -28,7 +28,7 @@
 /* general text color */
 body {
   color: white;
-  font-feature-settings: "liga" 0;
+  font-variant-ligatures: none;
 }
 
 /* text color of status bar and dialogs */
@@ -360,7 +360,7 @@ body {
   background-color: transparent;
 }
 .sce-helper .sce-helper-main {
-  border-width: #025b9b;
+  border-color: #025b9b;
   border-bottom-width: 0;
   background-color: #041c32;
 }
