@@ -148,11 +148,16 @@ body {
     color: white;
 }
 
-/* bg color of empty code pane (with no program open) */
+/* color of empty code pane (with no program open) */
 .emptyWorkspaceSplash {
-  background-color: #e6e6e6 !important;
+  background-color: #fbe3cd !important;
+  filter: invert(100%);
 }
-
+#emptyWorkspaceSplashTextDiv {
+  filter: invert(100%);
+  color: #169eff;
+}
+  
 /* color of a text boxes and text files, eg, a saved SAS log file */
 .corporate .dijitSelect,
 .corporate .dijitSelect .dijitButtonContents,
