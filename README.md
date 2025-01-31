@@ -14,14 +14,12 @@ To change the font for SAS code, load up SAS Studio. In your browser's toolbar, 
 
   <img src=".github/screenshots/font-customize.png" alt="Font pop-up" width="400px" />
 
-In the text box, type the name of any font available on your computer. If you leave the text box blank, SAS Studio will use its default font. Note that the custom CSS disables ligatures, so ligatures will not be used even if your font has them.
+In the text box, type the name of any font available on your computer. If you leave the text box blank, SAS Studio will use its default font. Note that the custom CSS disables ligatures, so ligatures will not be used even if your font has them. After specifying your font, either click "Close" or just click somewhere outside of the pop-up.
 
-Note that SAS Studio has a built-in method to change the font *size*: In SAS Studio, go to Preferences -> Code and Log, then find the "Font size" drop-down menu.
+Regarding font *size*, SAS Studio has a built-in method to change it: In SAS Studio, go to Preferences -> Code and Log, then find the "Font size" drop-down menu.
 
 ## Screenshots
 
 * Ignite Dark
   
   ![Ignite dark](.github/screenshots/ignite-dark.png)
-  
-</details>
