@@ -5,7 +5,7 @@
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/ignite-dark.user.css
 @license     MIT
-@description A dark theme for SAS Studio 3.x, inspired by the built-in Ignite theme from SAS Enterprise Guide
+@description A dark theme for SAS Studio 3.x, inspired by the built-in Ignite theme from later versions of SAS Studio
 @author      Daniel Muenz
 @advanced text custom-font "Font Family" ""
 @preprocessor uso
@@ -49,7 +49,6 @@ body {
 .corporate .dijitButtonHover #statusBarMessagesButton_label {
   color: #39cfff;
 }
-
 
 /* adjust icon color */
 .dijitIcon {
@@ -595,6 +594,24 @@ a:hover {
 }
 #columnSelectorGridLocation .dgrid-selected .field-name {
   background-color: #2f196d;
+}
+
+/* visual programmer */
+[id^="ProcessFlowGraphContainer"] {
+  background-color: #0caca4 !important;
+    border-radius: 0.5rem;
+}
+.dmBreadcrumbButton * {
+  background-color: transparent !important;
+}
+[id^="ProcessFlowViewToolbarContainer"] [id^="dijit_form_Button_"] {
+  color: #0997fe;
+}
+[id^="ProcessFlowViewToolbarContainer"] .dmBreadcrumbButtonHover [id^="dijit_form_Button_"] {
+  color: #f22ff5;
+}
+[id^="ProcessFlowViewToolbarContainer"] .last [id^="dijit_form_Button_"] {
+  color: white;
 }
 
 }
