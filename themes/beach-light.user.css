@@ -1,0 +1,359 @@
+/* ==UserStyle==
+@name        Beach Light
+@namespace   https://github.com/dmuenz/sas-studio3-themes
+@version     0.0.1
+@homepageURL https://github.com/dmuenz/sas-studio3-themes
+@updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/beach-light.user.css
+@license     MIT
+@description A light theme for SAS Studio 3.x
+@author      Daniel Muenz
+@advanced text custom-font "Font Family" ""
+@preprocessor uso
+==/UserStyle== */
+
+@-moz-document regexp(".*/SASStudio/.*") {
+
+/* bg color of areas around/between the panes */
+#bigKahuna,
+.statusBar {
+  background: #e9f4fa !important;
+}
+
+/* spitter colors */
+.corporate .dijitSplitterHHover,
+.corporate .dijitSplitterVHover {
+  background-color: #cbe7f6;
+}
+.corporate .dijitSplitterHActive,
+.corporate .dijitSplitterVActive {
+  background-color: #94aebc;
+}
+
+/* no ligatures */
+body {
+  color: black;
+  font-variant-ligatures: none;
+}
+
+/* text color of status bar and dialogs */
+.corporate .dijitButtonHover #statusBarMessagesButton_label {
+  color: #f22ff5;
+}
+
+/* adjust icon color */
+.corporate .dijitToolbar .dijitButtonHover .dijitButtonNode,
+.corporate .dijitToolbar .dijitComboButton .dijitButtonNodeHover,
+.corporate .dijitToolbar .dijitComboButton .dijitDownArrowButtonHover,
+.corporate .dijitToolbar .dijitDropDownButtonHover .dijitButtonNode,
+.corporate .dijitToolbar .dijitToggleButtonHover .dijitButtonNode {
+  background-color: #acdafa;
+}
+
+
+/* bg color of status bar at bottom of code editor */
+.lineStatusBar {
+  background: #fceec8 !important
+}
+
+/* color of dialogs */
+.corporate .dijitDialog,
+.corporate .dijitDialogPaneActionBar,
+.corporate .dijitDialogTitleBar {
+  background-color: #fdf6e3
+}
+#mainOptionTable,
+.corporate #optionsTabber .dijitTabContainerLeft-dijitContentPane,
+#optionsTabber {
+  background-color: #fdf6e3 !important;
+}
+#optionsTabber_tablist .dijitTabHover.dijitHover {
+  background-color: #d4e6fa !important;
+}
+.corporate .dijitButtonNode,
+.corporate .messageGrid .dgrid-cell,
+.corporate .messageGrid .dgrid-scroller {
+  background-color: #fdf6e3;
+}
+#busyDialog_contentArea {
+  background-color: transparent !important;
+}
+
+.corporate .dijitDialogCloseIconHover {
+  filter: brightness(0.8) sepia(100%) saturate(400%) invert(100%);
+}
+.corporate #optionsTabber .dijitTabContainerLeft-tabs .dijitTab {
+  background-color: transparent;
+}
+.corporate #optionsTabber .dijitTabContainerLeft-tabs .dijitTabChecked {
+  background-color: #bcd7f3 !important;
+}
+
+    
+/* color of empty code pane (with no program open) */
+.emptyWorkspaceSplash {
+  background-color: #fdf6e3 !important;
+}
+  
+/* color of a text boxes and text files, eg, a saved SAS log file */
+.corporate .dijitSelect,
+.corporate .dijitSelect .dijitButtonContents,
+.corporate .dijitTextBox,
+.corporate .dijitTextBox .dijitButtonNode,
+.corporate div.dijitComboBoxDisabled .dijitArrowButtonInner {
+  background-color: #fdf6e3;
+}
+
+/* menus */
+.corporate .dijitMenu {
+    background-color: #fdf6e3;
+}
+.corporate .dijitMenuBar .dijitMenuItemHover,
+.corporate .dijitMenuItemHover,
+.dijitMenuItemSelected,
+.dijitMenuPassive .dijitMenuItemHover {
+  background-color: #e9f4fa;
+}
+.corporate .dijitSelectMenu .dijitMenuItemSelected td,
+.corporate .dijitComboBoxMenu .dijitMenuItemHover,
+.corporate .dijitComboBoxMenu .dijitMenuItemSelected {
+  background-color: #bcd7f3;
+}
+
+
+
+/* right-side editor pane */
+.corporate .dijitToolbar,
+.corporate .dojoxExpandoClosed .dojoxExpandoTitle,
+.corporate .dojoxExpandoLeft .dojoxExpandoTitle,
+.corporate .dojoxExpandoRight .dojoxExpandoTitle,
+.corporate .sasSuiteTabs .dijitToolbar,
+.sce {
+  background-color: #fdf6e3;
+  color: black;
+}
+.corporate .dijitTabContainerTop-tabs .dijitTabChecked {
+  background-color: #fdf6e3!important; /* bg color of selected tab in SCE */
+  color: black;
+  border-left: 0;
+  border-right: 0;
+}
+.corporate .dijitTab {
+  color: #565656;
+  background-color: transparent;
+  border: 1px solid #8fc9ff;
+}
+.corporate .dojoDndItemOver {
+  background-color: #8fc9ff !important;
+  color: black !important;
+}
+.corporate .sasSuiteTabs .dijitTab,
+.corporate .taskTabContainer .dijitTab {
+    background-color: transparent;
+}
+.corporate .sasSuiteTabs .dijitTabHover,
+.corporate .taskTabContainer .dijitTabHover {
+    background-color: transparent !important;
+    color: #0378cd !important;
+}
+.corporate .sasSuiteTabs .dijitTabChecked,
+.corporate .taskTabContainer .dijitTabChecked {
+    color: black !important;
+}
+.corporate .dijitTabCheckedFocused,
+.corporate .dijitTabFocused {
+    outline: 0;
+}
+
+
+.sce .textviewContent ::selection,
+.sce .textviewSelection {
+  color: inherit; /* text color of selected text */
+}
+
+/* font for SAS code */
+.sce,
+.sce textarea,
+.sce span,
+.sce pre,
+.sce label {
+  font-family: /*[[custom-font]]*/;
+}
+
+
+/* helper pop-up */
+.sce-ac {
+  background-color: #fdf6e3;
+}
+.sce-ac .item-selected {
+  background-color: #bcd7f3;
+}
+.sce-ac .item-default {
+  background-color: transparent;
+}
+.sce-helper .sce-helper-main {
+  border-bottom-width: 0;
+  background-color: #fdf6e3;
+}
+a:link, a:visited {
+  color: #025b9b;
+}
+a:hover {
+  color: #f22ff5;
+}
+
+/* colors for viewing a data set */
+.corporate .dgrid {
+    border-color: #bebebe;
+    background: #fdf6e3;
+}
+.corporate .dgrid-cell {
+    border-bottom-color: #bebebe;
+    border-right-color: #bebebe;
+}
+.corporate .dgrid-header-row {
+    background-color: #8fc9ff;
+}
+.corporate .dgrid-row-even {
+    background-color: #f1f1f1;
+}
+.corporate .dgrid-row-odd {
+    background-color: #ebebeb;
+}
+.corporate .dgrid-cell:hover,
+.corporate .dgrid-selected,
+.corporate .dgrid-selected .dgrid-cell,
+.corporate .dgrid-selected .dgrid-cell:hover,
+.corporate .dgrid-selected:hover,
+.corporate .dgrid-row-even:hover,
+.corporate .dgrid-row-odd:hover {
+    background-color: #e5dcff;
+}
+.sasTableColumnNameSelector .dgrid .dgrid-scroller .dgrid-row-even .dgrid-cell,
+.sasTableColumnNameSelector .dgrid .dgrid-scroller .dgrid-row-odd .dgrid-cell {
+    background-color: #fdf6e3;
+    border-width: 0;
+}
+.sasTableColumnNameSelector .dgrid .dgrid-scroller .dgrid-selected,
+.sasTableColumnNameSelector .dgrid .dgrid-scroller .dgrid-selected .dgrid-cell {
+    background-color: #fdf6e3!important;
+    border-color: #fdf6e3!important;
+}
+.dijitBorderContainer .dijitSplitterH {
+    border-top-width: 0;
+}
+
+/* colors of the SAS log */
+.corporate .dijitTabPaneWrapper {
+  background-color: #fdf6e3;
+}
+.corporate .dijitTabPaneWrapper {
+  border-width: 0;
+  border-left: 0;
+}
+.dijitTabContainerTop-tabs {
+  border-width: 0;
+}
+.corporate .dijitTitlePaneTitleHover:hover {
+  background-color: #d4e6fa !important;
+}
+
+/* colors of the left-side navigation pane */
+.corporate .dijitAccordionContainer .dijitAccordionContainer-child,
+.corporate .dijitAccordionContainer .dijitAccordionChildWrapper,
+.corporate .dijitAccordionInnerContainer,
+.corporate .accordionToolbar,
+.corporate .dgrid-scroller,
+.dijitTree {
+  background-color: #fdf6e3;
+}
+.corporate .dijitAccordionInnerContainerSelected .dijitAccordionTitle,
+.corporate .dijitAccordionInnerContainerSelected:hover .dijitAccordionTitle {
+  background-color: #bcd7f3;
+}
+.corporate .dijitAccordionInnerContainerHover .dijitAccordionTitle {
+  background-color: #d4e6fa;
+}
+.dijitAccordionTitle {
+  color: black !important;
+}
+.corporate .dijitTreeRowHover {
+  background: #d4e6fa;
+}
+.dijitAccordionContainer {
+  border-width: 0px !important;
+}
+.corporate .dijitTreeRowSelected,
+.corporate .dijitTreeRowSelected:hover {
+  background: #bcd7f3;
+}
+
+
+/* scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: #9198a9;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #e9e9e9;
+}
+::-webkit-scrollbar-corner,
+.textview ::-webkit-scrollbar-corner {
+  background-color: #fdf6e3;
+}
+
+
+/* About SAS Studio & Edit Autoexec dialogs */
+#aboutDialogTabContainer .dijitTabContainerTop-dijitContentPane,
+#autoExecTabs .dijitTabContainerTop-dijitContentPane {
+  background-color: #fdf6e3 !important;
+  border: 1px solid #bcbcbc !important;
+  padding-left: 2px !important;
+}
+#aboutDialogTabContainer .dijitTab,
+#autoExecTabs .dijitTab {
+  border-left: 1px solid #8fc9ff !important;
+  border-right: 1px solid #8fc9ff !important;
+}
+    
+/* Tasks colors */
+.tabButtonSettings *,
+.tabButtonResults *,
+.tabButtonSplit * {
+  color: black !important;
+}
+.ButtonPressed {
+  background-color: #e9f4fa;
+}
+.dijitTitlePaneContentInner,
+.dualSelectorToolbar {
+  background-color: #fdf6e3 !important;
+}
+.taskTabContainer .field-name,
+#columnSelectorGridLocation .field-name {
+  background-color: #fdf6e3;
+  border: 0 !important;
+}
+#columnSelectorGridLocation .dgrid-selected .field-name {
+  background-color: #bcd7f3;
+}
+
+/* visual programmer */
+[id^="ProcessFlowGraphContainer"] {
+  background-color: transparent !important;
+}
+[id^="ProcessFlowViewMasterContainer"] .dijitTabContainerTop-dijitContentPane {
+  background-color: transparent !important;
+}
+.dmBreadcrumbButton * {
+  background-color: transparent !important;
+}
+[id^="ProcessFlowViewToolbarContainer"] [id^="dijit_form_Button_"] {
+  color: #025b9b;
+}
+[id^="ProcessFlowViewToolbarContainer"] .dmBreadcrumbButtonHover [id^="dijit_form_Button_"] {
+  color: #f22ff5;
+}
+[id^="ProcessFlowViewToolbarContainer"] .last [id^="dijit_form_Button_"] {
+  color: black;
+}
+
+}
