@@ -8,6 +8,8 @@ To use, first install the **Stylus** browser extension, available for [Chrome, E
 
 📦 [Install *Ignite Dark*](themes/ignite-dark.user.css?raw=true) : a dark theme inspired by the theme of the same name from SAS Enterprise Guide.
 
+📦 [Install *Beach Light*](themes/beach-light.user.css?raw=true) : a light theme that's not as glaringly bright as SAS Studio's default theme.
+
 ## Changing the font of the code editor
 
 To change the font for SAS code, load up SAS Studio. In your browser's toolbar, click the extension icon, then click the "Stylus" extension. A little pop-up window should appear with a list of the themes you have installed. Click the gear icon next to a theme, and a new window will pop up:
@@ -23,3 +25,7 @@ Regarding font *size*, SAS Studio has a built-in method to change it: In SAS Stu
 * Ignite Dark
   
   ![Ignite Dark screenshot](screenshots/ignite-dark.png?raw=true)
+
+* Beach Light
+  
+  ![Beach Light screenshot](screenshots/beach-light.png?raw=true)
