@@ -6,13 +6,13 @@ SAS Studio version 3 has a bright white theme with no built-in options to custom
 
 To use, first install the **Stylus** browser extension, available for [Chrome, Edge (via Chrome)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), and [Firefox](https://addons.mozilla.org/firefox/addon/styl-us/). Then click a link below to install one of the themes. You can install more than one theme and toggle between them as desired.
 
-📦 [Install *Ignite Dark*](https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/ignite-dark.user.css) : a dark theme inspired by the theme of the same name from SAS Enterprise Guide.
+📦 [Install *Ignite Dark*](themes/ignite-dark.user.css?raw=true) : a dark theme inspired by the theme of the same name from SAS Enterprise Guide.
 
 ## Changing the font of the code editor
 
 To change the font for SAS code, load up SAS Studio. In your browser's toolbar, click the extension icon, then click the "Stylus" extension. A little pop-up window should appear with a list of the themes you have installed. Click the gear icon next to a theme, and a new window will pop up:
 
-  <img src=".github/screenshots/font-customize.png" alt="Font pop-up" width="400px" />
+  <img src="screenshots/font-customize.png?raw=true" alt="Font pop-up" width="400px" />
 
 In the text box, type the name of any font available on your computer. If you leave the text box blank, SAS Studio will use its default font. Note that the custom CSS disables ligatures, so ligatures will not be used even if your font has them. After specifying your font, either click "Close" or just click somewhere outside of the pop-up.
 
@@ -22,4 +22,4 @@ Regarding font *size*, SAS Studio has a built-in method to change it: In SAS Stu
 
 * Ignite Dark
   
-  ![Ignite dark](.github/screenshots/ignite-dark.png)
+  ![Ignite Dark screenshot](screenshots/ignite-dark.png?raw=true)
