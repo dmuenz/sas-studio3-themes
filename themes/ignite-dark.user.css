@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Ignite Dark
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     1.0.0
+@version     2025.02.10
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/ignite-dark.user.css
 @license     MIT
@@ -273,14 +273,14 @@ body {
 .sce .textviewContent ::selection,
 .sce .textviewSelection {
   color: inherit; /* text color of selected text */
-  background: #5830c8; /* bg color of selected text */
+  background: #3a2183; /* bg color of selected text */
 }
 .sce .textviewSelectionUnfocused {
   background: #434343; /* bg color of selected text when unfocused */
 }
 .sce .annotationRange.matchingSearch,
 .sce .annotationRange.currentSearch {
-  background-color: #5830c8;
+  background-color: #321c70;
 }
 .sce .annotationRange.currentBracket,
 .sce .annotationRange.matchingBracket {
@@ -445,6 +445,9 @@ a:hover {
 .corporate .dijitToolbar .dijitButtonText:hover {
     color: white
 }
+.corporate .dojoxExpandoClosed {
+  background: #041c32;
+}
 
 /* colors of the SAS log */
 .corporate .dijitTabPaneWrapper {
@@ -513,6 +516,7 @@ a:hover {
 .corporate .dijitAccordionInnerContainerSelected:hover .dijitAccordionTitle {
   background-color: #0b3158;
   border: 1px solid #025b9b;
+  border-right-width: 1.5px;
 }
 .corporate .dijitAccordionInnerContainerHover .dijitAccordionTitle {
   background-color: #025b9b;
@@ -565,7 +569,8 @@ a:hover {
 #aboutDialogTable {
   color: white;
 }
-.dijitTabContainerTop-dijitContentPane {
+#aboutDialogTabContainer .dijitTabContainerTop-dijitContentPane,
+#autoExecTabs .dijitTabContainerTop-dijitContentPane {
   background-color: #041c32 !important;
   border: 1px solid #0a2b4d !important;
   padding-left: 2px !important;
@@ -573,7 +578,13 @@ a:hover {
 #aboutDialogTable img {
   filter: drop-shadow(0 0 1px white);
 }
+#aboutDialogTabContainer .dijitTab,
+#autoExecTabs .dijitTab {
+  border-left: 1px solid #02528b !important;
+  border-right: 1px solid #02528b !important;
+}
 
+    
 /* Tasks colors */
 .tabButtonSettings *,
 .tabButtonResults *,
@@ -595,11 +606,27 @@ a:hover {
 #columnSelectorGridLocation .dgrid-selected .field-name {
   background-color: #2f196d;
 }
-
+.taskTabContainer .dijitContentPane {
+  background-color: #041c32 !important;
+}
+.taskTabContainer .dijitButtonNode {
+  border: 0;
+}
+.taskTabContainer .sasImportantStatusIcon {
+  filter: invert(100%) hue-rotate(150deg);
+}
+.taskTabContainer .transparentIcon .dijitButtonNode:hover {
+  background-color: transparent;
+  border: 0;
+}
+    
 /* visual programmer */
 [id^="ProcessFlowGraphContainer"] {
   background-color: #0caca4 !important;
-    border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+[id^="ProcessFlowViewMasterContainer"] .dijitTabContainerTop-dijitContentPane {
+  background-color: transparent !important;
 }
 .dmBreadcrumbButton * {
   background-color: transparent !important;
