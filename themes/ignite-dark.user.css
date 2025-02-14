@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Ignite Dark
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.02.10
+@version     2025.02.14
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/ignite-dark.user.css
 @license     MIT
@@ -146,7 +146,29 @@ body {
     background-color: #0b3158 !important;
     color: white;
 }
-
+    
+#libraryPropDialog .propertiesTable {
+    background-color: transparent;
+}
+#libraryPropDialog .treeProjectFolder,
+#libraryPropDialog .treeProjectFolderOpen,
+#libraryPropDialog .libraryEngineProperty,
+#libraryPropDialog .libraryLockedPropery {
+    filter: brightness(2.7)
+} 
+#unassignedLibsDialog .dijitDialogPaneContentArea {
+    background-color: #041c32;
+}
+#unassignedLibsDialog .dojoxGrid {
+    background-color: transparent;
+}
+#unassignedLibsDialog .dojoxGridCell {
+    background-color: #041c32;
+}
+#unassignedLibsDialog .dojoxGridArrowButtonNode {
+    filter: invert(100%)
+}
+    
 /* color of empty code pane (with no program open) */
 .emptyWorkspaceSplash {
   background-color: #fbe3cd !important;
@@ -266,6 +288,9 @@ body {
 .sce {
   caret-color: white; /* color of the insertion caret */
 }
+.textviewSelectionCaret {
+  background: white; /* color of the vertical insertion caret */
+}
 .sce .ruler.lines {
   color: #b5b5b5; /* text color of line numbers */
   border-right: 1px solid #cdcdcd; /* vertical line to right of line numbers */
@@ -316,10 +341,9 @@ body {
 /*.sce .punctuation {
   color: #888888;
 }*/
-.sce .declaration {
+/*.sce .declaration {
   color: #ffffff;
-  font-style: italic;
-}
+}*/
 /*.sce .error {
   color: #007cc0;
 }*/
@@ -365,6 +389,31 @@ body {
   color: #041c32;
   background-color: #c49145;
 }
+    
+    
+/* colors for XML language elements */
+.sce.sce-xml .attribute-name {
+  color: #ff3a3a;
+}
+.sce.sce-xml .constant {
+  color: #0caca4;
+}
+.sce.sce-xml .xml-pe.doctype,
+.sce.sce-xml .tag-name,
+.sce.sce-xml .keyword.markup-decl,
+.sce.sce-xml .keyword.instruction ,
+.sce.sce-xml .meta.tag.punctuation {
+  color: #4d9dff;
+}
+.sce.sce-xml .xml-pe,
+.sce.sce-xml .keyword.operator {
+  color: #969696;
+}
+.sce.sce-xml .punctuation.instruction ,
+.sce.sce-xml .instruction {
+  color: #c9c9c9;
+}
+    
 
 
 /* helper pop-up */
@@ -565,26 +614,47 @@ a:hover {
 }
 
 
-/* About SAS Studio dialog */
+/* About SAS Studio, Autoexec, and SAS Table & Column Properties dialogs */
 #aboutDialogTable {
   color: white;
-}
-#aboutDialogTabContainer .dijitTabContainerTop-dijitContentPane,
-#autoExecTabs .dijitTabContainerTop-dijitContentPane {
-  background-color: #041c32 !important;
-  border: 1px solid #0a2b4d !important;
-  padding-left: 2px !important;
 }
 #aboutDialogTable img {
   filter: drop-shadow(0 0 1px white);
 }
+#aboutDialogTabContainer .dijitTabContainerTop-dijitContentPane,
+#autoExecTabs .dijitTabContainerTop-dijitContentPane {
+  background-color: #041c32 !important;
+  padding-left: 2px !important;
+}
+#propsDlg .dijitTabContainerTop-dijitContentPane,
+#columnPropTabContainer .dijitTabContainerTop-dijitContentPane {
+  background-color: #041c32 !important;
+}
 #aboutDialogTabContainer .dijitTab,
-#autoExecTabs .dijitTab {
+#autoExecTabs .dijitTab,
+#propsTab_tablist .dijitTab,
+#columnPropTabContainer_tablist .dijitTab {
   border-left: 1px solid #02528b !important;
   border-right: 1px solid #02528b !important;
 }
+#aboutDialogTabContainer .dijitTabContainerTop-container,
+#autoExecTabs .dijitTabContainerTop-container,
+#propsDlg .dijitTabContainerTop-container,
+#columnPropTabContainer .dijitTabContainerTop-container {
+  border: 1px solid #02528b;
+  border-top: 0;
+}
+#aboutDialogTabContainer .dijitTabContainerTop-tabs,
+#autoExecTabs .dijitTabContainerTop-tabs,
+#propsTab_tablist .dijitTabContainerTop-tabs,
+#columnPropTabContainer_tablist .dijitTabContainerTop-tabs {
+  border-bottom: 1px solid #02528b;
+}
+#propsTab .dgrid-cell {
+  background-color: transparent;
+}
 
-    
+
 /* Tasks colors */
 .tabButtonSettings *,
 .tabButtonResults *,
