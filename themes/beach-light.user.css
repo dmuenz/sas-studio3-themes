@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Beach Light
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     0.0.1
+@version     2025-02-14
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/beach-light.user.css
 @license     MIT
@@ -88,12 +88,21 @@ body {
   background-color: #bcd7f3 !important;
 }
 
+#libraryPropDialog .propertiesTable {
+  background-color: transparent;
+}
+#unassignedLibsDialog .dijitDialogPaneContentArea {
+    background-color: #fdf6e3;
+}
     
 /* color of empty code pane (with no program open) */
 .emptyWorkspaceSplash {
   background-color: #fdf6e3 !important;
 }
-  
+#unassignedLibsDialog .dojoxGrid {
+  background-color: transparent;
+}
+
 /* color of a text boxes and text files, eg, a saved SAS log file */
 .corporate .dijitSelect,
 .corporate .dijitSelect .dijitButtonContents,
@@ -301,18 +310,40 @@ a:hover {
 }
 
 
-/* About SAS Studio & Edit Autoexec dialogs */
+/* About SAS Studio, Autoexec, and SAS Table & Column Properties dialogs */
 #aboutDialogTabContainer .dijitTabContainerTop-dijitContentPane,
 #autoExecTabs .dijitTabContainerTop-dijitContentPane {
   background-color: #fdf6e3 !important;
-  border: 1px solid #bcbcbc !important;
   padding-left: 2px !important;
 }
+#propsDlg .dijitTabContainerTop-dijitContentPane,
+#columnPropTabContainer .dijitTabContainerTop-dijitContentPane {
+  background-color: #fdf6e3 !important;
+}
 #aboutDialogTabContainer .dijitTab,
-#autoExecTabs .dijitTab {
+#autoExecTabs .dijitTab,
+#propsTab_tablist .dijitTab,
+#columnPropTabContainer_tablist .dijitTab {
   border-left: 1px solid #8fc9ff !important;
   border-right: 1px solid #8fc9ff !important;
 }
+#aboutDialogTabContainer .dijitTabContainerTop-container,
+#autoExecTabs .dijitTabContainerTop-container,
+#propsDlg .dijitTabContainerTop-container,
+#columnPropTabContainer .dijitTabContainerTop-container {
+  border: 1px solid #8fc9ff;
+  border-top: 0;
+}
+#aboutDialogTabContainer .dijitTabContainerTop-tabs,
+#autoExecTabs .dijitTabContainerTop-tabs,
+#propsTab_tablist .dijitTabContainerTop-tabs,
+#columnPropTabContainer_tablist .dijitTabContainerTop-tabs {
+  border-bottom: 1px solid #8fc9ff;
+}
+#propsTab .dgrid-cell {
+  background-color: transparent;
+}
+    
     
 /* Tasks colors */
 .tabButtonSettings *,
