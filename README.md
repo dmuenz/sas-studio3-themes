@@ -6,9 +6,11 @@ SAS Studio version 3 has a bright white theme with no built-in options to custom
 
 To use, first install the **Stylus** browser extension, available for [Chrome, Edge (via Chrome)](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), and [Firefox](https://addons.mozilla.org/firefox/addon/styl-us/). Then click a link below to install one of the themes. You can install more than one theme and toggle between them as desired.
 
-📦 [Install *Ignite Dark*](themes/ignite-dark.user.css?raw=true) : a dark theme inspired by the theme of the same name from SAS Enterprise Guide.
+📦 [Install *Ignite Dark*](themes/ignite-dark.user.css?raw=true) : a dark theme inspired by the Ignite theme from the SAS Viya versions of SAS Studio.
 
 📦 [Install *Beach Light*](themes/beach-light.user.css?raw=true) : a light theme that's not as glaringly bright as SAS Studio's default theme.
+
+After clicking one of the above links, click the "Install style" button on the top left of your page. Occassionally you may get a pop-up message saying "Failed to install userstyle", but this message can be safely ignored, and the "Install style" button should now instead say "Style is installed".
 
 ## Changing the font of the code editor
 
