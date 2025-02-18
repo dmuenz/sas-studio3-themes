@@ -93,7 +93,7 @@ body {
   background-color: #041c32 !important;
 }
 .corporate #optionsTabber .dijitTabContainerLeft-tabs {
-  border-right-width: 0px;
+  border-right-color: #858585;
 }
 .corporate .dijitDialogTitle {
   color: #00a3ff;
