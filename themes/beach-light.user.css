@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name        Beach Light
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025-02-14
+@version     2025.02.18
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/beach-light.user.css
 @license     MIT
 @description A light theme for SAS Studio 3.x
 @author      Daniel Muenz
-@advanced text custom-font "Font Family" ""
 @preprocessor uso
+@var text custom-font "Font name" ""
 ==/UserStyle== */
 
 @-moz-document regexp(".*/SASStudio/.*") {
@@ -29,7 +29,7 @@
   background-color: #94aebc;
 }
 
-/* no ligatures */
+/* general text color */
 body {
   color: black;
   font-variant-ligatures: none;
