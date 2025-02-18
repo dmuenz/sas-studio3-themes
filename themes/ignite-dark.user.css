@@ -219,6 +219,7 @@ body {
   color: white;
   border: 0;
 }
+.corporate .dijitMenuItemActive,
 .corporate .dijitSelectMenu .dijitMenuItemSelected td,
 .corporate .dijitComboBoxMenu .dijitMenuItemHover,
 .corporate .dijitComboBoxMenu .dijitMenuItemSelected {
