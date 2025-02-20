@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Beach Light
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.02.18
+@version     2025.02.20
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/beach-light.user.css
 @license     MIT
@@ -103,13 +103,19 @@ body {
   background-color: transparent;
 }
 
-/* color of a text boxes and text files, eg, a saved SAS log file */
+/* color of text boxes and text files, eg, a saved SAS log file */
 .corporate .dijitSelect,
 .corporate .dijitSelect .dijitButtonContents,
 .corporate .dijitTextBox,
 .corporate .dijitTextBox .dijitButtonNode,
 .corporate div.dijitComboBoxDisabled .dijitArrowButtonInner {
-  background-color: #fdf6e3;
+  background-color: #fceec8;
+  background-color: #fef3d7;
+
+}
+#editTabContentPane .dijitNumberTextBox {
+  margin-bottom: 3px;
+  height: 25px;
 }
 
 /* menus */
@@ -172,7 +178,10 @@ body {
 .corporate .dijitTabFocused {
     outline: 0;
 }
-
+.corporate .sasSuiteTabs .dijitTabContainerTop-tabs,
+.corporate .taskTabContainer .dijitTabContainerTop-tabs {
+  border-bottom-color: #ddd;
+}
 
 .sce .textviewContent ::selection,
 .sce .textviewSelection {

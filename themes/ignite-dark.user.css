@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Ignite Dark
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.02.18
+@version     2025.02.20
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/ignite-dark.user.css
 @license     MIT
@@ -179,7 +179,7 @@ body {
   color: #169eff;
 }
   
-/* color of a text boxes and text files, eg, a saved SAS log file */
+/* color of text boxes and text files, eg, a saved SAS log file */
 .corporate .dijitSelect,
 .corporate .dijitSelect .dijitButtonContents,
 .corporate .dijitTextBox,
@@ -194,6 +194,10 @@ body {
 .corporate .dijitTextBox .dijitInputField,
 .corporate .dijitInputInner {
   color: white;
+}
+#editTabContentPane .dijitNumberTextBox {
+  margin-bottom: 3px;
+  height: 25px;
 }
 
 /* menus */
