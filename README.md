@@ -10,7 +10,7 @@ To use, first install the **Stylus** browser extension, available for [Chrome, E
 
 📦 [Install *Beach Light*](themes/beach-light.user.css?raw=true) : a light theme that's not as glaringly bright as SAS Studio's default theme.
 
-After clicking one of the above links, click the "Install style" button on the top left of your page. Occassionally you may get a pop-up message saying "Failed to install userstyle", but this message can be safely ignored, and the "Install style" button should now instead say "Style is installed".
+After clicking one of the above links, click the "Install style" button on the top left of your page. You may see a pop-up message saying "Failed to install userstyle", but this message can be safely ignored, and the "Install style" button should now instead say "Style is installed".
 
 ## Changing the font of the code editor
 
@@ -18,7 +18,7 @@ To change the font for SAS code, load up SAS Studio. In your browser's toolbar, 
 
   <img src="screenshots/font-customize.png?raw=true" alt="Font pop-up" width="400px" />
 
-In the text box, type the name of any font available on your computer. If you leave the text box blank, SAS Studio will use its default font. Note that the custom CSS disables ligatures, so ligatures will not be used even if your font has them. After specifying your font, either click "Close" or just click somewhere outside of the pop-up.
+In the text box, type the name of any font available on your computer. If you leave the text box blank, SAS Studio will use its default font. (Note that the custom CSS disables ligatures, so ligatures will not be used even if your font has them.) After specifying your font, either click "Close" or just click somewhere outside of the pop-up.
 
 Regarding font *size*, SAS Studio has a built-in method to change it: In SAS Studio, go to Preferences -> Code and Log, then find the "Font size" drop-down menu.
 
