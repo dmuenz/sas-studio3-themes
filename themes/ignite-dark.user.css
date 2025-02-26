@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Ignite Dark
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.02.20
+@version     2025.02.26
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/ignite-dark.user.css
 @license     MIT
@@ -167,6 +167,18 @@ body {
 }
 #unassignedLibsDialog .dojoxGridArrowButtonNode {
     filter: invert(100%)
+}
+    
+#messageDialog .messageButton .dijitButtonContents  {
+    outline: 1px solid #e6e6e6;
+    color: white;
+}
+#messageDialog .messageButton .dijitButtonContents:hover  {
+    background-color: #0378cd;
+}
+#messageDialog .dgrid-cell:hover,
+#messageDialog .dgrid-selected .dgrid-cell {
+    background-color: #041c32;
 }
     
 /* color of empty code pane (with no program open) */
@@ -419,8 +431,12 @@ body {
   color: #c9c9c9;
 }
     
-
-
+/* message pop-up (eg, when server session is reset) */
+#messagePopperBC .studioToasterCloseIcon {
+  background-color: white;
+  filter: initial;
+}
+  
 /* helper pop-up */
 .sce-ac {
   background-color: #041c32;
