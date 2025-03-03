@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Ignite Dark
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.02.26
+@version     2025.03.02
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/ignite-dark.user.css
 @license     MIT
@@ -29,7 +29,7 @@
   background-color: #4d4d86;
 }
 
-/* signing-in busy icon */
+/* busy icon, e.g., when signing-in */
 .sasBusyIcon {
   filter: invert(100%);
 }
@@ -138,7 +138,6 @@ body {
   filter: brightness(0.8) sepia(100%) saturate(400%) invert(100%);
 }
 
-
 .corporate #optionsTabber .dijitTabContainerLeft-tabs .dijitTab {
     background-color: #041c32;
 }
@@ -180,6 +179,11 @@ body {
 #messageDialog .dgrid-selected .dgrid-cell {
     background-color: #041c32;
 }
+
+#tablePrintDialog .dijitDialogPaneContentArea {
+  background-color: #041c32 !important;
+}
+
     
 /* color of empty code pane (with no program open) */
 .emptyWorkspaceSplash {
@@ -518,6 +522,9 @@ a:hover {
 .corporate .dojoxExpandoClosed {
   background: #041c32;
 }
+#filterTableHelpDlgContent code {
+  background-color: #0a2b4d;
+}
 
 /* colors of the SAS log */
 .corporate .dijitTabPaneWrapper {
@@ -709,6 +716,9 @@ a:hover {
 .taskTabContainer .transparentIcon .dijitButtonNode:hover {
   background-color: transparent;
   border: 0;
+}
+.corporate .taskRuntimeEditorToolbar {
+  border-top-color: transparent;
 }
     
 /* visual programmer */
