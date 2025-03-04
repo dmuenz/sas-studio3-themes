@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Ignite Dark
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.03.03
+@version     2025.03.04
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/ignite-dark.user.css
 @license     MIT
@@ -278,7 +278,8 @@ body {
   background-color: #0b3056;
   border: 1px solid #025b9b;
 }
-.corporate .sasSuiteTabs .dijitTabContainerTop-tabs {
+.corporate .sasSuiteTabs .dijitTabContainerTop-tabs,
+.corporate .taskTabContainer .dijitTabContainerTop-tabs {
   border-bottom-color: #a1a1a1;
 }
 .corporate .sasSuiteTabs .dijitTabChecked,
@@ -701,7 +702,7 @@ a:hover {
 .dualSelectorToolbar {
   background-color: #041c32 !important;
 }
-.taskTabContainer .field-name,
+.taskContainer .field-name,
 #columnSelectorGridLocation .field-name {
   background-color: #041c32;
   border: 0 !important;
@@ -709,7 +710,7 @@ a:hover {
 #columnSelectorGridLocation .dgrid-selected .field-name {
   background-color: #2f196d;
 }
-.taskTabContainer .dijitContentPane {
+[id$='taskContainer'] .taskTabContainer .dijitContentPane {
   background-color: #041c32 !important;
 }
 .taskTabContainer .dijitButtonNode {
@@ -748,28 +749,42 @@ a:hover {
 }
 
 /* query tab */
+[id^='QueryViewMasterContainer'] [id^='QueryViewTabNavigator'] .dijitContentPane {
+  background-color: #041c32 !important;
+}
+[id^=QueryViewTabNavigator] [id^=TablesGraphMasterContainer] [id^=DiagramMessagePane],
 [id^='QueryColumnsTabView'] [id^='Message'] * {
   background-color: transparent !important;
 }
+[id^='JoinViewMasterContainer'] [id^='JoinCriteriaTable'],
 [id^='QueryColumnsTabView'] [id*='Table'] table {
-  background-color: #49dabe !important;
   background-color: #e5e5e5 !important;
   filter: invert(100%) hue-rotate(240deg) brightness(200%);
 }
 [id^='QueryColumnsTabView'] [id*='Table'] .dijitArrowButtonContainer {
   background-color: black !important;
 }
+[id^='JoinViewMasterContainer'] [id^='JoinCriteriaTable'] tr,
 [id^='QueryColumnsTabView'] [id*='Table'] tr {
   color: black;
 }
+[id^='JoinViewMasterContainer'] [id^='JoinCriteriaTable'] .dijitButtonNode,
 [id^='QueryColumnsTabView'] [id*='Table'] .dijitButtonNode {
-  background-color: white;
+  background-color: transparent;
   border: 1px solid #c9c9c9;
+  padding-left: 1px;
 }
+[id^='JoinViewMasterContainer'] [id^='JoinCriteriaTable'] .dijitButtonNode:hover,
+[id^='QueryColumnsTabView'] [id*='Table'] .dijitButtonNode:hover {
+  background-color: transparent;
+  filter: hue-rotate(90deg);
+}
+[id^='JoinViewMasterContainer'] [id^='JoinCriteriaTable'] .dijitIcon,
 [id^='QueryColumnsTabView'] [id*='Table'] .dijitIcon,
 [id^='QueryColumnsTabView'] [id*='Table'] [id^='TypeImage'] {
   filter: brightness(150%) hue-rotate(120deg) invert(100%);
 }
+[id^='JoinViewMasterContainer'] [id^='JoinCriteriaTable'] .dijitValidationTextBox,
 [id^='QueryColumnsTabView'] [id*='Table'] .dijitTextBox,
 [id^='QueryColumnsTabView'] [id*='Table'] .dijitValidationTextBox {
   filter: brightness(50%) hue-rotate(120deg) invert(100%);
