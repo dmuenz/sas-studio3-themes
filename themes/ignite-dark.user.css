@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Ignite Dark
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.03.02
+@version     2025.03.03
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/ignite-dark.user.css
 @license     MIT
@@ -514,7 +514,7 @@ a:hover {
     background-color: #041c32!important;
     border-color: #041c32!important;
 }
-.dijitBorderContainer .dijitSplitterH {
+.dojoxExpandoWrapper .dijitSplitterH {
     border-top-width: 0;
 }
 .dgrid-cell img {
@@ -745,6 +745,49 @@ a:hover {
 }
 [id^="ProcessFlowViewToolbarContainer"] .last [id^="dijit_form_Button_"] {
   color: white;
+}
+
+/* query tab */
+[id^='QueryColumnsTabView'] [id^='Message'] * {
+  background-color: transparent !important;
+}
+[id^='QueryColumnsTabView'] [id*='Table'] table {
+  background-color: #49dabe !important;
+  background-color: #e5e5e5 !important;
+  filter: invert(100%) hue-rotate(240deg) brightness(200%);
+}
+[id^='QueryColumnsTabView'] [id*='Table'] .dijitArrowButtonContainer {
+  background-color: black !important;
+}
+[id^='QueryColumnsTabView'] [id*='Table'] tr {
+  color: black;
+}
+[id^='QueryColumnsTabView'] [id*='Table'] .dijitButtonNode {
+  background-color: white;
+  border: 1px solid #c9c9c9;
+}
+[id^='QueryColumnsTabView'] [id*='Table'] .dijitIcon,
+[id^='QueryColumnsTabView'] [id*='Table'] [id^='TypeImage'] {
+  filter: brightness(150%) hue-rotate(120deg) invert(100%);
+}
+[id^='QueryColumnsTabView'] [id*='Table'] .dijitTextBox,
+[id^='QueryColumnsTabView'] [id*='Table'] .dijitValidationTextBox {
+  filter: brightness(50%) hue-rotate(120deg) invert(100%);
+}
+[id^='QueryColumnsTabView'] [id*='Table'] .dijitTextBoxReadOnly {
+  background-color: #383838;
+}
+.singleValueDialog .dijitDialogPaneContentArea .dijitButtonHover .dijitButtonNode {
+  background-color: green;
+  filter: hue-rotate(90deg);
+}
+.singleValueDialog .dijitDialogPaneContentArea .sasEmbeddedDialog {
+  background-color: transparent;
+}
+.singleValueDialog .dijitDialogPaneContentArea .rowNavigation .dijitButtonNode,
+.singleValueDialog .dijitDialogPaneContentArea .rowNavigation .dijitButtonNode:hover {
+  background-color: transparent;
+  border-width: 0;
 }
 
 }
