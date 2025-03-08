@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Ignite Dark
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.03.04
+@version     2025.03.07
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/ignite-dark.user.css
 @license     MIT
@@ -504,6 +504,9 @@ a:hover {
     background-color: #2f196d;
     color: white;
 }
+.dgrid-sortable.dojoDndItemAnchor {
+  background-color: #80007e;
+}
 .sasTableColumnNameSelector .dgrid .dgrid-scroller .dgrid-row-even .dgrid-cell,
 .sasTableColumnNameSelector .dgrid .dgrid-scroller .dgrid-row-odd .dgrid-cell {
     background-color: #041c32;
@@ -514,6 +517,13 @@ a:hover {
 .sasTableColumnNameSelector .dgrid .dgrid-scroller .dgrid-selected .dgrid-cell {
     background-color: #041c32!important;
     border-color: #041c32!important;
+}
+.dijitExpandoPaneSingleChild td.dgrid-cell.field-name,
+.dijitExpandoPaneSingleChild td.dgrid-cell.field-value {
+    user-select: text;
+}
+.dgrid-header-row {
+    user-select: none;
 }
 .dojoxExpandoWrapper .dijitSplitterH {
     border-top-width: 0;
