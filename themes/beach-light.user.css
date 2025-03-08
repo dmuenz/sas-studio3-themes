@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Beach Light
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.02.20
+@version     2025.03.07
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/beach-light.user.css
 @license     MIT
@@ -255,6 +255,13 @@ a:hover {
 .sasTableColumnNameSelector .dgrid .dgrid-scroller .dgrid-selected .dgrid-cell {
     background-color: #fdf6e3!important;
     border-color: #fdf6e3!important;
+}
+.dijitExpandoPaneSingleChild td.dgrid-cell.field-name,
+.dijitExpandoPaneSingleChild td.dgrid-cell.field-value {
+    user-select: text;
+}
+.dgrid-header-row {
+    user-select: none;
 }
 .dijitBorderContainer .dijitSplitterH {
     border-top-width: 0;
