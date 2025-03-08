@@ -697,6 +697,9 @@ a:hover {
 #propsTab .dgrid-cell {
   background-color: transparent;
 }
+#propsDlg .dgrid-content .dgrid-cell {
+  user-select: text !important;
+}
 
 
 /* Tasks colors */
