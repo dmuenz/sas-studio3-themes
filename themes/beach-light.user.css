@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Beach Light
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.03.10
+@version     2025.03.10.02
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/beach-light.user.css
 @license     MIT
@@ -27,6 +27,11 @@
 .corporate .dijitSplitterHActive,
 .corporate .dijitSplitterVActive {
   background-color: #94aebc;
+}
+
+/* search bar */
+#entireSearchBanner {
+  background-color: transparent;
 }
 
 /* general text color */
@@ -182,6 +187,10 @@ body {
 .corporate .taskTabContainer .dijitTabContainerTop-tabs {
   border-bottom-color: #ddd;
 }
+.sasStudioTabsTabContainerChild .dijitSplitterV.dijitAlignRight {
+  border-left: 1px solid #dcdcdc;
+  margin-left: 3px;
+}
 
 .sce .textviewContent ::selection,
 .sce .textviewSelection {
@@ -219,7 +228,7 @@ a:hover {
   color: #f22ff5;
 }
 
-/* colors for viewing a data set */
+/* viewing a data set or table */
 .corporate .dgrid {
     border-color: #bebebe;
     background: #fdf6e3;
@@ -262,9 +271,11 @@ a:hover {
     background-color: #fdf6e3!important;
     border-color: #fdf6e3!important;
 }
-.dijitExpandoPaneSingleChild td.dgrid-cell.field-name,
-.dijitExpandoPaneSingleChild td.dgrid-cell.field-value {
+.dgrid-scroller .dgrid-cell {
     user-select: text;
+}
+.dgrid-header-row {
+    user-select: none;
 }
 .dijitExpandoPaneSingleChild .dgrid-row-even tr * {
     background-color: #f1f1f1 !important;
@@ -278,10 +289,7 @@ a:hover {
 .dijitExpandoPaneSingleChild .dgrid-row:hover * {
     background-color: #e5dcff !important;
 }
-.dgrid-header-row {
-    user-select: none;
-}
-.dijitBorderContainer .dijitSplitterH {
+.dojoxExpandoWrapper .dijitSplitterH {
     border-top-width: 0;
 }
 .sasTableColumnNameSelector .dgrid-cell img,
@@ -381,9 +389,6 @@ a:hover {
 #propsTab .dgrid-cell {
   background-color: transparent;
 }
-#propsDlg .dgrid-content .dgrid-cell {
-  user-select: text !important;
-}
 
 
 /* Tasks colors */
@@ -399,7 +404,7 @@ a:hover {
 .dualSelectorToolbar {
   background-color: #fdf6e3 !important;
 }
-.taskTabContainer .field-name,
+.taskContainer .field-name,
 #columnSelectorGridLocation .field-name {
   background-color: #fdf6e3;
   border: 0 !important;
@@ -426,6 +431,22 @@ a:hover {
 }
 [id^="ProcessFlowViewToolbarContainer"] .last [id^="dijit_form_Button_"] {
   color: black;
+}
+
+/* query tab */
+[id^='QueryViewMasterContainer'] [id^='QueryViewTabNavigator'] .dijitContentPane {
+  background-color: #fdf6e3 !important;
+}
+[id^=QueryViewTabNavigator] [id^=TablesGraphMasterContainer] [id^=DiagramMessagePane],
+[id^='QueryColumnsTabView'] [id^='Message'] * {
+  background-color: transparent !important;
+}
+.singleValueDialog .dijitDialogPaneContentArea .sasEmbeddedDialog {
+  background-color: transparent;
+}
+.singleValueDialog .dijitDialogPaneContentArea .rowNavigation .dijitButtonNode,
+.singleValueDialog .dijitDialogPaneContentArea .rowNavigation .dijitButtonNode:hover {
+  border-width: 0;
 }
 
 }

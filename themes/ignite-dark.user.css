@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Ignite Dark
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.03.10
+@version     2025.03.10.02
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/ignite-dark.user.css
 @license     MIT
@@ -310,6 +310,10 @@ body {
 .corporate .dijitTabCheckedFocused,
 .corporate .dijitTabFocused {
     outline: 0;
+}
+.sasStudioTabsTabContainerChild .dijitSplitterV.dijitAlignRight {
+  border-left: 1px solid #e9ecef;
+  margin-left: 3px;
 }
 
 .sce {
