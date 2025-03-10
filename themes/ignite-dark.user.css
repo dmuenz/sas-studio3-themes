@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Ignite Dark
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.03.07
+@version     2025.03.10
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/ignite-dark.user.css
 @license     MIT
@@ -475,7 +475,7 @@ a:hover {
   color: #f22ff5;
 }
 
-/* colors for viewing a data set */
+/* viewing a data set or table */
 .corporate .dgrid {
     border-color: black;
     background: black;
@@ -488,6 +488,9 @@ a:hover {
 .corporate .dgrid-header-row {
     background-color: #0378cd;
 }
+.corporate .dgrid-header-row .dojoDndItemOver {
+  cursor: pointer;
+}
 .corporate .dgrid-row-even {
     background-color: #343434;
 }
@@ -495,12 +498,15 @@ a:hover {
     background-color: #2d2d2d;
 }
 .corporate .dgrid-cell:hover,
+.corporate .dgrid-row-even:hover,
+.corporate .dgrid-row-odd:hover {
+    background-color: #521349;
+    color: white;
+}
 .corporate .dgrid-selected,
 .corporate .dgrid-selected .dgrid-cell,
 .corporate .dgrid-selected .dgrid-cell:hover,
-.corporate .dgrid-selected:hover,
-.corporate .dgrid-row-even:hover,
-.corporate .dgrid-row-odd:hover {
+.corporate .dgrid-selected:hover {
     background-color: #2f196d;
     color: white;
 }
@@ -518,12 +524,27 @@ a:hover {
     background-color: #041c32!important;
     border-color: #041c32!important;
 }
-.dijitExpandoPaneSingleChild td.dgrid-cell.field-name,
-.dijitExpandoPaneSingleChild td.dgrid-cell.field-value {
+.dgrid-scroller .dgrid-cell {
     user-select: text;
 }
 .dgrid-header-row {
     user-select: none;
+}
+.dijitExpandoPaneSingleChild .dgrid-row-even tr * {
+    background-color: #343434 !important;
+}
+.dijitExpandoPaneSingleChild .dgrid-row-odd tr * {
+    background-color: #2d2d2d !important;
+}
+.dijitExpandoPaneSingleChild .dgrid-header-row * {
+    background-color: #0378cd !important;
+}
+.dijitExpandoPaneSingleChild .dgrid-row:hover * {
+    background-color: #521349 !important;
+}
+.sasTableColumnNameSelector .dgrid-cell img,
+.sasTableColumnNameSelector .dojoDndItemOver .dgrid-cell img {
+  background-color: transparent !important;
 }
 .dojoxExpandoWrapper .dijitSplitterH {
     border-top-width: 0;
@@ -696,9 +717,6 @@ a:hover {
 }
 #propsTab .dgrid-cell {
   background-color: transparent;
-}
-#propsDlg .dgrid-content .dgrid-cell {
-  user-select: text !important;
 }
 
 

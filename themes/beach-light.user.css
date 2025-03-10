@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Beach Light
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.03.07
+@version     2025.03.10
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/beach-light.user.css
 @license     MIT
@@ -231,6 +231,10 @@ a:hover {
 .corporate .dgrid-header-row {
     background-color: #8fc9ff;
 }
+.corporate .dgrid-header-row .dojoDndItemOver {
+  background-color: #45afea !important;
+  cursor: pointer;
+}
 .corporate .dgrid-row-even {
     background-color: #f1f1f1;
 }
@@ -238,13 +242,15 @@ a:hover {
     background-color: #ebebeb;
 }
 .corporate .dgrid-cell:hover,
-.corporate .dgrid-selected,
-.corporate .dgrid-selected .dgrid-cell,
-.corporate .dgrid-selected .dgrid-cell:hover,
-.corporate .dgrid-selected:hover,
 .corporate .dgrid-row-even:hover,
 .corporate .dgrid-row-odd:hover {
     background-color: #e5dcff;
+}
+.corporate .dgrid-selected,
+.corporate .dgrid-selected .dgrid-cell,
+.corporate .dgrid-selected .dgrid-cell:hover,
+.corporate .dgrid-selected:hover {
+    background-color: #fbdcff;
 }
 .sasTableColumnNameSelector .dgrid .dgrid-scroller .dgrid-row-even .dgrid-cell,
 .sasTableColumnNameSelector .dgrid .dgrid-scroller .dgrid-row-odd .dgrid-cell {
@@ -260,11 +266,27 @@ a:hover {
 .dijitExpandoPaneSingleChild td.dgrid-cell.field-value {
     user-select: text;
 }
+.dijitExpandoPaneSingleChild .dgrid-row-even tr * {
+    background-color: #f1f1f1 !important;
+}
+.dijitExpandoPaneSingleChild .dgrid-row-odd tr * {
+    background-color: #ebebeb !important;
+}
+.dijitExpandoPaneSingleChild .dgrid-header-row * {
+    background-color: #8fc9ff !important;
+}
+.dijitExpandoPaneSingleChild .dgrid-row:hover * {
+    background-color: #e5dcff !important;
+}
 .dgrid-header-row {
     user-select: none;
 }
 .dijitBorderContainer .dijitSplitterH {
     border-top-width: 0;
+}
+.sasTableColumnNameSelector .dgrid-cell img,
+.sasTableColumnNameSelector .dojoDndItemOver .dgrid-cell img {
+  background-color: transparent !important;
 }
 
 /* colors of the SAS log */
