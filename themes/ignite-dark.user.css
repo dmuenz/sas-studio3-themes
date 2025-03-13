@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Ignite Dark
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.03.10.02
+@version     2025.03.13
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/ignite-dark.user.css
 @license     MIT
@@ -329,14 +329,14 @@ body {
 .sce .textviewContent ::selection,
 .sce .textviewSelection {
   color: inherit; /* text color of selected text */
-  background: #3a2183; /* bg color of selected text */
+  background: #5637b2; /* bg color of selected text */
 }
 .sce .textviewSelectionUnfocused {
   background: #434343; /* bg color of selected text when unfocused */
 }
 .sce .annotationRange.matchingSearch,
 .sce .annotationRange.currentSearch {
-  background-color: #321c70;
+  background-color: #6237b2;
 }
 .sce .annotationRange.currentBracket,
 .sce .annotationRange.matchingBracket {
@@ -356,71 +356,44 @@ body {
 }
 
 /* colors for SAS language elements */
-.sce .text {
+.sce .text,
+.sce .sep,
+.sce .namelit {
   color: #d0d0d0;
 }
 .sce .comment,
 .sce .macro-comment {
   color: #5fab5f;
 }
-/*.sce .literal {
-  color: #997777;
-}*/
-.sce .keyword {
-  color: #4d9dff;
-}
-/*.sce .punctuation {
-  color: #888888;
-}*/
-/*.sce .declaration {
-  color: #ffffff;
-}*/
-/*.sce .error {
-  color: #007cc0;
-}*/
-.sce .sec-keyword {
-  color: #8f8fff;
-}
-.sce .sep {
-  color: #d0d0d0;
-}
-.sce .macro-sec-keyword {
-  color: #8f8fff;
-}
+.sce .keyword,
 .sce .macro-keyword {
   color: #4d9dff;
+}
+.sce .sec-keyword,
+.sce .macro-sec-keyword {
+  color: #8f8fff;
 }
 .sce .macro-ref {
   color: white;
 }
-.sce .string {
+.sce .string,
+.sce .hex {
   color: #ff3dff;
 }
 .sce .date,
 .sce .time,
-.sce .dt {
-  color: #0caca4;
-}
-/*.sce .bitmask {
-  color: #008080;
-}*/
-.sce .namelit {
-  color: #d0d0d0;
-}
-.sce .hex {
-  color: #ff3dff;
-}
-.sce .numeric {
-  color: #0caca4;
-}
+.sce .dt,
+.sce .numeric,
 .sce .format {
   color: #0caca4;
 }
 .sce .cards-data {
-  color: #041c32;
-  background-color: #c49145;
+  color: #d0d0d0;
+  background-color: black;
 }
-    
+.sce .cards-data::selection {
+  background-color: #2B1C59;
+}    
     
 /* colors for XML language elements */
 .sce.sce-xml .attribute-name {
@@ -583,6 +556,10 @@ a:hover {
 }
 .sasError {
   color: #ff3a3a;
+}
+.focus-line {
+  background-color: #220742;
+  outline: 1px solid #6d21ca;
 }
 
 .corporate .sasSuiteTabs .dijitTitlePane .dijitClosed .dijitArrowNode,
