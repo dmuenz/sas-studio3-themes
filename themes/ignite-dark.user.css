@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Ignite Dark
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.03.13
+@version     2025.05.20
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/ignite-dark.user.css
 @license     MIT
@@ -38,7 +38,16 @@
 #entireSearchBanner {
   background-color: transparent;
 }
-
+#studioSearchGrid .dgrid-row-even {
+  background-color: #343434;
+}
+#studioSearchGrid .dgrid-row-odd {
+  background-color: #2d2d2d;
+}
+#studioSearchGrid td span {
+  background-color: #ff00ff !important;
+}
+    
 /* general text color */
 body {
   color: white;
@@ -189,7 +198,17 @@ body {
   background-color: #041c32 !important;
 }
 
-    
+/* text buttons in Preferences, e.g., "Reset to Defaults" */
+#optionsGITRepositories,#optionsResetBatch,#optionsResetCAS,#optionsResetEG,#optionsResetEditor,#optionsResetGITProfiles,#optionsResetGeneral,#optionsResetResults,#optionsResetStartup,#optionsResetTables,#optionsResetTaskRepositories,#optionsResetTasks {
+  background-color: #041c32;
+}
+#optionsGITRepositories_label,#optionsResetBatch_label,#optionsResetCAS_label,#optionsResetEG_label,#optionsResetEditor_label,#optionsResetGITProfiles_label,#optionsResetGeneral_label,#optionsResetResults_label,#optionsResetStartup_label,#optionsResetTables_label,#optionsResetTaskRepositories_label,#optionsResetTasks_label {
+   color: white;
+}
+.dijitButtonHover .dijitButtonNode #optionsGITRepositories_label,.dijitButtonHover .dijitButtonNode #optionsResetBatch_label,.dijitButtonHover .dijitButtonNode #optionsResetCAS_label,.dijitButtonHover .dijitButtonNode #optionsResetEG_label,.dijitButtonHover .dijitButtonNode #optionsResetEditor_label,.dijitButtonHover .dijitButtonNode #optionsResetGITProfiles_label,.dijitButtonHover .dijitButtonNode #optionsResetGeneral_label,.dijitButtonHover .dijitButtonNode #optionsResetResults_label,.dijitButtonHover .dijitButtonNode #optionsResetStartup_label,.dijitButtonHover .dijitButtonNode #optionsResetTables_label,.dijitButtonHover .dijitButtonNode #optionsResetTaskRepositories_label,.dijitButtonHover .dijitButtonNode #optionsResetTasks_label {
+  color: #0381dc;
+}
+
 /* color of empty code pane (with no program open) */
 .emptyWorkspaceSplash {
   background-color: #fbe3cd !important;
