@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Ignite Dark
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.05.20
+@version     2025.07.31
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/ignite-dark.user.css
 @license     MIT
@@ -560,7 +560,8 @@ a:hover {
 }
 
 /* colors of the SAS log */
-.corporate .dijitTabPaneWrapper {
+.corporate .dijitTabPaneWrapper,
+.sasLog {
   background-color: #041c32;
 }
 .sasSource,
