@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Ignite Dark
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.07.31
+@version     2026.02.23
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/ignite-dark.user.css
 @license     MIT
@@ -217,6 +217,11 @@ body {
 #emptyWorkspaceSplashTextDiv {
   filter: invert(100%);
   color: #169eff;
+}
+    
+/* highlight a user-selected img in Results tab */
+.c img::selection {
+  background-color: #2f64d060;
 }
   
 /* color of text boxes and text files, eg, a saved SAS log file */

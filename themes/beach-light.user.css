@@ -1,17 +1,22 @@
 /* ==UserStyle==
 @name        Beach Light
 @namespace   https://github.com/dmuenz/sas-studio3-themes
-@version     2025.03.10.02
+@version     2026.02.23
 @homepageURL https://github.com/dmuenz/sas-studio3-themes
 @updateURL   https://raw.githubusercontent.com/dmuenz/sas-studio3-themes/master/themes/beach-light.user.css
 @license     MIT
 @description A light theme for SAS Studio 3.x
 @author      Daniel Muenz
-@preprocessor uso
+@preprocessor less
 @var text custom-font "Font name" ""
+@var range sandiness "Sandiness" [1, 0, 1, 0.25]
 ==/UserStyle== */
 
 @-moz-document regexp(".*/SASStudio/.*") {
+
+@sand: lighten(#fdf6e3, 6% - pow(@sandiness, 0.5) * 6);
+@lineStatusBar-color: darken(@sand, 3% * (@sandiness + 1));
+@textBox-color: lighten(@sand, 3%, relative);
 
 /* bg color of areas around/between the panes */
 #bigKahuna,
@@ -54,22 +59,21 @@ body {
   background-color: #acdafa;
 }
 
-
 /* bg color of status bar at bottom of code editor */
 .lineStatusBar {
-  background: #fceec8 !important
+  background: @lineStatusBar-color !important
 }
 
 /* color of dialogs */
 .corporate .dijitDialog,
 .corporate .dijitDialogPaneActionBar,
 .corporate .dijitDialogTitleBar {
-  background-color: #fdf6e3
+  background-color: @sand
 }
 #mainOptionTable,
 .corporate #optionsTabber .dijitTabContainerLeft-dijitContentPane,
 #optionsTabber {
-  background-color: #fdf6e3 !important;
+  background-color: @sand !important;
 }
 #optionsTabber_tablist .dijitTabHover.dijitHover {
   background-color: #d4e6fa !important;
@@ -77,7 +81,7 @@ body {
 .corporate .dijitButtonNode,
 .corporate .messageGrid .dgrid-cell,
 .corporate .messageGrid .dgrid-scroller {
-  background-color: #fdf6e3;
+  background-color: @sand;
 }
 #busyDialog_contentArea {
   background-color: transparent !important;
@@ -97,26 +101,29 @@ body {
   background-color: transparent;
 }
 #unassignedLibsDialog .dijitDialogPaneContentArea {
-    background-color: #fdf6e3;
+    background-color: @sand;
 }
     
 /* color of empty code pane (with no program open) */
 .emptyWorkspaceSplash {
-  background-color: #fdf6e3 !important;
+  background-color: @sand !important;
 }
 #unassignedLibsDialog .dojoxGrid {
   background-color: transparent;
 }
 
+/* highlight a user-selected img in Results tab */
+.c img::selection {
+  background-color: #2f64d060;
+}
+    
 /* color of text boxes and text files, eg, a saved SAS log file */
 .corporate .dijitSelect,
 .corporate .dijitSelect .dijitButtonContents,
 .corporate .dijitTextBox,
 .corporate .dijitTextBox .dijitButtonNode,
 .corporate div.dijitComboBoxDisabled .dijitArrowButtonInner {
-  background-color: #fceec8;
-  background-color: #fef3d7;
-
+  background-color: @textBox-color;
 }
 #editTabContentPane .dijitNumberTextBox {
   margin-bottom: 3px;
@@ -125,7 +132,7 @@ body {
 
 /* menus */
 .corporate .dijitMenu {
-    background-color: #fdf6e3;
+    background-color: @sand;
 }
 .corporate .dijitMenuBar .dijitMenuItemHover,
 .corporate .dijitMenuItemHover,
@@ -148,11 +155,11 @@ body {
 .corporate .dojoxExpandoRight .dojoxExpandoTitle,
 .corporate .sasSuiteTabs .dijitToolbar,
 .sce {
-  background-color: #fdf6e3;
+  background-color: @sand;
   color: black;
 }
 .corporate .dijitTabContainerTop-tabs .dijitTabChecked {
-  background-color: #fdf6e3!important; /* bg color of selected tab in SCE */
+  background-color: @sand!important; /* bg color of selected tab in SCE */
   color: black;
   border-left: 0;
   border-right: 0;
@@ -203,13 +210,13 @@ body {
 .sce span,
 .sce pre,
 .sce label {
-  font-family: /*[[custom-font]]*/;
+  font-family: @custom-font;
 }
 
 
 /* helper pop-up */
 .sce-ac {
-  background-color: #fdf6e3;
+  background-color: @sand;
 }
 .sce-ac .item-selected {
   background-color: #bcd7f3;
@@ -219,7 +226,7 @@ body {
 }
 .sce-helper .sce-helper-main {
   border-bottom-width: 0;
-  background-color: #fdf6e3;
+  background-color: @sand;
 }
 a:link, a:visited {
   color: #025b9b;
@@ -231,7 +238,7 @@ a:hover {
 /* viewing a data set or table */
 .corporate .dgrid {
     border-color: #bebebe;
-    background: #fdf6e3;
+    background: @sand;
 }
 .corporate .dgrid-cell {
     border-bottom-color: #bebebe;
@@ -263,13 +270,13 @@ a:hover {
 }
 .sasTableColumnNameSelector .dgrid .dgrid-scroller .dgrid-row-even .dgrid-cell,
 .sasTableColumnNameSelector .dgrid .dgrid-scroller .dgrid-row-odd .dgrid-cell {
-    background-color: #fdf6e3;
+    background-color: @sand;
     border-width: 0;
 }
 .sasTableColumnNameSelector .dgrid .dgrid-scroller .dgrid-selected,
 .sasTableColumnNameSelector .dgrid .dgrid-scroller .dgrid-selected .dgrid-cell {
-    background-color: #fdf6e3!important;
-    border-color: #fdf6e3!important;
+    background-color: @sand!important;
+    border-color: @sand!important;
 }
 .dgrid-scroller .dgrid-cell {
     user-select: text;
@@ -299,7 +306,7 @@ a:hover {
 
 /* colors of the SAS log */
 .corporate .dijitTabPaneWrapper {
-  background-color: #fdf6e3;
+  background-color: @sand;
 }
 .corporate .dijitTabPaneWrapper {
   border-width: 0;
@@ -319,7 +326,7 @@ a:hover {
 .corporate .accordionToolbar,
 .corporate .dgrid-scroller,
 .dijitTree {
-  background-color: #fdf6e3;
+  background-color: @sand;
 }
 .corporate .dijitAccordionInnerContainerSelected .dijitAccordionTitle,
 .corporate .dijitAccordionInnerContainerSelected:hover .dijitAccordionTitle {
@@ -352,19 +359,19 @@ a:hover {
 }
 ::-webkit-scrollbar-corner,
 .textview ::-webkit-scrollbar-corner {
-  background-color: #fdf6e3;
+  background-color: @sand;
 }
 
 
 /* About SAS Studio, Autoexec, and SAS Table & Column Properties dialogs */
 #aboutDialogTabContainer .dijitTabContainerTop-dijitContentPane,
 #autoExecTabs .dijitTabContainerTop-dijitContentPane {
-  background-color: #fdf6e3 !important;
+  background-color: @sand !important;
   padding-left: 2px !important;
 }
 #propsDlg .dijitTabContainerTop-dijitContentPane,
 #columnPropTabContainer .dijitTabContainerTop-dijitContentPane {
-  background-color: #fdf6e3 !important;
+  background-color: @sand !important;
 }
 #aboutDialogTabContainer .dijitTab,
 #autoExecTabs .dijitTab,
@@ -402,11 +409,11 @@ a:hover {
 }
 .dijitTitlePaneContentInner,
 .dualSelectorToolbar {
-  background-color: #fdf6e3 !important;
+  background-color: @sand !important;
 }
 .taskContainer .field-name,
 #columnSelectorGridLocation .field-name {
-  background-color: #fdf6e3;
+  background-color: @sand;
   border: 0 !important;
 }
 #columnSelectorGridLocation .dgrid-selected .field-name {
@@ -435,7 +442,7 @@ a:hover {
 
 /* query tab */
 [id^='QueryViewMasterContainer'] [id^='QueryViewTabNavigator'] .dijitContentPane {
-  background-color: #fdf6e3 !important;
+  background-color: @sand !important;
 }
 [id^=QueryViewTabNavigator] [id^=TablesGraphMasterContainer] [id^=DiagramMessagePane],
 [id^='QueryColumnsTabView'] [id^='Message'] * {
